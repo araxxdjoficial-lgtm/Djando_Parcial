@@ -3,7 +3,7 @@
 set -o errexit
 
 # poetry install
-pip install -r freeze > requirements.txt
+# pip install -r freeze > requirements.txt
 
 python manage.py collectstatic --no-input
 python manage.py migrate
