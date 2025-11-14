@@ -36,12 +36,14 @@ def create_task(request):
         description = request.POST['description']
         project_id = request.POST['project_id']
         # Guardar en Mongo
+        """
         settings.MONGO_TASKS.insert_one({
             "Title": title,
             "Description": description,
             "Done": False,
             "project_id": project_id
         })
+        """
         return redirect('tasks')
     
 def create_project(request):
@@ -52,9 +54,11 @@ def create_project(request):
     else:
         Project.objects.create(name=request.POST["name"])
         name = request.POST["name"]
+        """
         settings.MONGO_PROJECTS.insert_one({
             "name": name
         })
+        """
         return redirect('projects')
     
 def delete_task(request, id):

@@ -93,7 +93,7 @@ WSGI_APPLICATION = 'taskSite.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.environ.get("DATABASE_URL"),
+        default='postgresql://django_database_cg7n_user:qDo4ZUnutyf8fMQgfxbR6PQZ9cdYG816@dpg-d4b99fre5dus73egjjb0-a.oregon-postgres.render.com/django_database_cg7n',
         conn_max_age=600,
         ssl_require=True
     )
