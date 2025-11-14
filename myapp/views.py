@@ -56,6 +56,11 @@ def create_project(request):
             "name": name
         })
         return redirect('projects')
+    
+def delete_task(request, id):
+    task = Task.objects.get(id=id)
+    task.delete()
+    return redirect('tasks')
 
 def project_detail(request, id):
     project = get_object_or_404(Project, id=id)

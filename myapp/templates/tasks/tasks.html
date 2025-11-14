@@ -11,9 +11,7 @@
 
     <p>{{task.description}}</p>
     <p>Project: {{task.project.name}}</p>
-    <button>
-        Delete
-    </button>
+    <a href="{% url 'delete_task' task.id %}" class="Button">Delete</a>
     <button>
         ✅ Done
     </button>

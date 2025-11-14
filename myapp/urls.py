@@ -8,4 +8,5 @@ urlpatterns = [
     path('tasks', views.TaskListView.as_view(), name="tasks"),
     path('create_task', views.create_task, name="create_task"),
     path('create_project', views.create_project, name="create_project"),
+    path('delete_task/<int:id>', views.delete_task, name="delete_task")
 ]
